@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Apply for health insurance (Medi-Cal)</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div id="main">
+            <div id="error-window"></div>
+            <div id="success-message"><p>Information successfully submitted</p></div>
+            <h1>Apply for health insurance (Medi-Cal)</h1>
+            <form id="application-form">
+                <div class="field field-text-input">
+                    <label id="name-label">Name</label>
+                    <input id="name-field" name="name" type="text">
+                    <p id="name-example" class="example">Example: Joe Smith</p>
+                </div>
+
+                <fieldset id="gender-field">
+                  <legend id="gender-label">Gender</legend>
+                  <div class="field field-radio-input">
+                    <label for="gender-female">
+                      Female
+                      <input type="radio" name="gender" id="gender-female"></input>
+                    </label>
+                  </div>
+                  <div class="field field-radio-input">
+                    <label for="gender-male">
+                      Male
+                     <input type="radio" name="gender" id="gender-male"></input>
+                    </label>
+                    <p id="gender-example" class="example">Your gender as recorded on your Social Security card.</p>
+                  </div>
+                </fieldset>
+                <div class="footer">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        </div>
+    </body>
+</html>
