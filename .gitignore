@@ -1,3 +1,6 @@
 *.DS_Store
-ENV
-ENV/*
+ENV/
+
+# virtualenvwrapper
+bin/
+include/
